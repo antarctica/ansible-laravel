@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  description: Configures the Laravel framework
+  author: British Antarctic Survey - Web and Applications Team
+  company: British Antarctic Survey
+  license: Open Government Licence V2
+  min_ansible_version: 1.6
+  platforms:
+  - name: Ubuntu
+      - trusty
+  categories:
+  - web
+
+armadillo_info:
+  name: Laravel
+  version: 0.4.0
+  source: git@stash.ceh.ac.uk:7999/barc/laravel.git
+  dependencies:
+  - git@stash.ceh.ac.uk:7999/barc/composer.git#v0.1.3
+
+dependencies:
+  - php

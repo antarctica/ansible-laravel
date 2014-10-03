@@ -1,0 +1,4 @@
+---
+
+- name: configure laravel boostrap file
+  template: src=bootstrap/start.php.j2 dest=/vagrant/bootstrap/start.php
