@@ -18,8 +18,8 @@ This role serves more than one purpose, controlled by including task files from 
 
 * Creates a Laravel [environment file](http://laravel.com/docs/4.2/configuration#protecting-sensitive-configuration) which contains key/value's that Laravel will expose as environment variables. These can be read in other config files (i.e. `app/config`) as needed.
 	* These files are ideal for protecting passwords or exposing ansible variables (e.g. database location). This task configures one environment at a time, typically it will be called multiple times (production / development).
-	* Each environment file is named using `laravel_env_defaults.name` then `laravel_env_user.name`, which should match an environment set in `bootstrap/start.php`.
-	* Key/value's for each file are taken first from `laravel_env_defaults.options` then `laravel_env_user.options`.
+    * A `laravel_env_user` variable **must** be declared when using this task file. Its `name` property **must** match an environment set in `bootstrap/start.php`.
+    * Any values set in `laravel_env_defaults` will be automatically applied to allo environment files. As all variables are namespaced there is no danger of clobbering variables, however you must ensure `app/config` files use the correct environment variables.
 
 ## Author
 
@@ -107,6 +107,11 @@ The format of `laravel_env_defaults` and `laravel_env_user` is as follows:
 	        * The value for the environment variable
 
 ## Changelog
+
+### 0.4.1 - October 2014
+
+* Fixing how variables are set when using the environment task file
+* Fixing missing refactoring
 
 ### 0.4.0 - October 2014
 

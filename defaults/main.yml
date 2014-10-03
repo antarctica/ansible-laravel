@@ -3,10 +3,9 @@
 
 laravel_bootstrap_environments: []
 
-laravel_env_defaults: 
+laravel_env_defaults:
   name: production
   options:
     - key: debug_mode
       type: raw
       value: false
-laravel_env_user: []
