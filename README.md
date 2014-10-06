@@ -19,7 +19,7 @@ This role serves more than one purpose, controlled by including task files from 
 * Creates a Laravel [environment file](http://laravel.com/docs/4.2/configuration#protecting-sensitive-configuration) which contains key/value's that Laravel will expose as environment variables. These can be read in other config files (i.e. `app/config`) as needed.
 	* These files are ideal for protecting passwords or exposing ansible variables (e.g. database location). This task configures one environment at a time, typically it will be called multiple times (production / development).
     * A `laravel_env_user` variable **must** be declared when using this task file. Its `name` property **must** match an environment set in `bootstrap/start.php`.
-    * Any values set in `laravel_env_defaults` will be automatically applied to allo environment files. As all variables are namespaced there is no danger of clobbering variables, however you must ensure `app/config` files use the correct environment variables.
+    * Any values set in `laravel_env_defaults` will be automatically applied to all environment files. As all variables are namespaced there is no danger of clobbering variables, however you must ensure `app/config` files reference the correct environment variables.
 
 ## Author
 
@@ -80,7 +80,10 @@ Include these steps in your project README (usually in a 'getting started' secti
 			* type = "raw"
 			* value = "false" 
 * `laravel_env_user`
-    * Default: []  (empty)
+    * Options for a specific environment file
+    * This variable **must** be declared if a task relies on it as no default is provided and a fatal error will occur.
+    * The `name` property **must** match an environment set in `bootstrap/start.php`.
+    * Default: (none - not defined)
 
 The format of `laravel_env_defaults` and `laravel_env_user` is as follows:
 
@@ -107,6 +110,10 @@ The format of `laravel_env_defaults` and `laravel_env_user` is as follows:
 	        * The value for the environment variable
 
 ## Changelog
+
+### 0.5.0 - October 2014   
+
+* Refactoring how variables for default and user options are defined. This is still not as clean as it could be and will likely change in the future.
 
 ### 0.4.1 - October 2014
 
