@@ -13,7 +13,7 @@ galaxy_info:
 
 armadillo_info:
   name: Laravel
-  version: 0.5.1
+  version: 0.5.2
   source: git@stash.ceh.ac.uk:7999/barc/laravel.git
   dependencies:
   - git@stash.ceh.ac.uk:7999/barc/composer.git#v0.1.3

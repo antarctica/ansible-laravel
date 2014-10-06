@@ -111,6 +111,10 @@ The format of `laravel_env_defaults` and `laravel_env_user` is as follows:
 
 ## Changelog
 
+### 0.5.2 - October 2014
+
+* Fixing permissions error with bootstrap/start.php
+
 ### 0.5.1 - October 2014
 
 * Fixing permissions error with bootstrap/start.php
