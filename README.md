@@ -6,13 +6,13 @@ Configures the Laravel framework
 
 ## Overview
 
-This role serves more than one purpose, controlled by including task files from this role in a playbook. 
+This role serves more than one purpose, controlled by including task files from this role in a playbook.
 
 **Note:** Including this role in the `roles` key of a playbook will call `tasks/main` automatically.
 
 ### Including `tasks/main` configures `bootstrap/start.php`
 
-* Populates the Laravel environments array using `laravel_bootstrap_environments`, this sets the Laravel environment based on the domain the app is accessed from. 
+* Populates the Laravel environments array using `laravel_bootstrap_environments`, this sets the Laravel environment based on the domain the app is accessed from.
 
 ### Including `tasks/environment` creates a Laravel environment file
 
@@ -78,7 +78,7 @@ Include these steps in your project README (usually in a 'getting started' secti
 		* options = (array)
 			* name = "debug"
 			* type = "raw"
-			* value = "false" 
+			* value = "false"
 * `laravel_env_user`
     * Options for a specific environment file
     * This variable **must** be declared if a task relies on it as no default is provided and a fatal error will occur.
@@ -111,7 +111,12 @@ The format of `laravel_env_defaults` and `laravel_env_user` is as follows:
 
 ## Changelog
 
-### 0.5.0 - October 2014   
+### 0.5.1 - October 2014
+
+* Fixing permissions error with bootstrap/start.php
+* Fixing incorrect dependency (was `php` should have been `composer`)
+
+### 0.5.0 - October 2014
 
 * Refactoring how variables for default and user options are defined. This is still not as clean as it could be and will likely change in the future.
 
