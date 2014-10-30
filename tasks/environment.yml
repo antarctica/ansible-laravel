@@ -1,8 +1,8 @@
 ---
 
 - name: configure laravel environment file
-  template: src=env.environment.php.j2 dest='/vagrant/.env.{{ laravel_env_user.name }}.php'
+  template: src=env.environment.php.j2 dest="{{ laravel_app_root }}/.env.{{ laravel_env_user.name }}.php"
 
 - name: if environment is production symlink to laravel default name
-  command: "cp /vagrant/.env.production.php /vagrant/.env.php"
-  when: laravel_env_user.name == 'production'
+  command: "cp {{ laravel_app_root }}/.env.production.php {{ laravel_app_root }}/.env.php"
+  when: laravel_env_user.name == "production"

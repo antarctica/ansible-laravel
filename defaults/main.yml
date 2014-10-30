@@ -1,6 +1,8 @@
 ---
 # Default variables - inventory or playbook overrides will be respected
 
+laravel_app_root: /app
+
 laravel_bootstrap_environments: []
 
 laravel_env_defaults:

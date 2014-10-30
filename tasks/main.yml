@@ -1,7 +1,7 @@
 ---
 
 - name: touching start file to prevent permissions problems
-  file: path=/vagrant/bootstrap/start.php mode=755 state=touch
+  file: path="{{ laravel_app_root }}/bootstrap/start.php" mode=755 state=touch
 
 - name: configure laravel boostrap file
-  template: src=bootstrap/start.php.j2 dest=/vagrant/bootstrap/start.php
+  template: src=bootstrap/start.php.j2 dest="{{ laravel_app_root }}/bootstrap/start.php"
