@@ -111,6 +111,10 @@ The format of `laravel_env_defaults` and `laravel_env_user` is as follows:
 
 ## Changelog
 
+### 0.5.4 - October 2014
+
+* Updating dependencies
+
 ### 0.5.3 - October 2014
 
 * Fixing environment file template to support user environment variables for production environments
