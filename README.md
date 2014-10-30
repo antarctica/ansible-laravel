@@ -65,6 +65,10 @@ Include these steps in your project README (usually in a 'getting started' secti
 
 ## Variables
 
+* `laravel_app_root`
+    * Path to the directory holding the laravel app (i.e. containing composer.lock)
+    * This variable **must** point to a directory, it **must not** include a trailing `/`.
+    * Default: "/app"
 * `laravel_config_bootstrap_environments`
     * Array of Laravel environment - hostname mappings
     * With each item consisting of following key/values
@@ -114,6 +118,7 @@ The format of `laravel_env_defaults` and `laravel_env_user` is as follows:
 ### 0.5.4 - October 2014
 
 * Updating dependencies
+* Laravel app directory is now configurable
 
 ### 0.5.3 - October 2014
 
