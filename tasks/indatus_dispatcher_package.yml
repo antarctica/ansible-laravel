@@ -1,0 +1,4 @@
+---
+
+- name: enable cron task under app users crontab
+  cron: name="indatus_dispatcher package cron driver" job="php {{ laravel_app_root }}/artisan scheduled:run 1>> /dev/null 2>&1" user="{{ laravel_app_user_username }}" state="present"
