@@ -12,6 +12,3 @@
   shell: 'grep -c -w "indatus/dispatcher" {{ laravel_app_root }}/composer.json'
   register: laravel_package_indatus_dispatcher_installed
   ignore_errors: True
-
-- include: indatus_dispatcher_package.yml
-  when: laravel_package_indatus_dispatcher_installed.stdout == "1"

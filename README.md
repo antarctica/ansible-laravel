@@ -13,7 +13,8 @@ This role serves more than one purpose, controlled by including task files from 
 ### Including `tasks/main` configures `bootstrap/start.php`
 
 * Populates the Laravel environments array using `laravel_bootstrap_environments`, this sets the Laravel environment based on the domain the app is accessed from.
-* If enabled and an app user is used an alias for "php artisan" is added to the app users bash_aliases, this is enabled by default.
+* If enabled and an app user is used, an alias for "php artisan" is added to the app users bash_aliases, this is enabled by default.
+* If used the cron job required by the cron driver of the Indatus/dispatcher dispatcher package is added to the app users cron job, if used.
 
 ### Including `tasks/environment` creates a Laravel environment file
 
@@ -152,6 +153,7 @@ The format of `laravel_env_defaults` and `laravel_env_user` is as follows:
 ### 0.6.0 - December 2014
 
 * An alias for 'php artisan' is registered for the app user, if used
+* If used, a cron job for the indatus/dispatcher package is created and enabled
 
 ### 0.5.4 - October 2014
 
