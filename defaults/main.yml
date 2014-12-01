@@ -1,6 +1,9 @@
 ---
 # Default variables - inventory or playbook overrides will be respected
 
+laravel_app_user_username: app
+laravel_app_user_add_artisan_bash_aliases: true
+
 laravel_app_root: /app
 
 laravel_bootstrap_environments: []

@@ -1,6 +1,8 @@
 ---
 
-- name: touching start file to prevent permissions problems
+- include: app-user.yml
+
+- name: touch start file to prevent permissions problems
   file: path="{{ laravel_app_root }}/bootstrap/start.php" mode=755 state=touch
 
 - name: configure laravel boostrap file
