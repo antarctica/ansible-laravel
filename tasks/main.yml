@@ -9,7 +9,7 @@
   template: src=bootstrap/start.php.j2 dest="{{ laravel_app_root }}/bootstrap/start.php"
 
 - name: test if indatus/dispatcher package is installed
-  shell 'grep -c -w "indatus/dispatcher" {{ laravel_app_root }}/composer.json'
+  shell: 'grep -c -w "indatus/dispatcher" {{ laravel_app_root }}/composer.json'
   register: laravel_package_indatus_dispatcher_installed
   ignore_errors: True
 
