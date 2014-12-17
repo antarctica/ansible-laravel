@@ -1,5 +1,10 @@
 # Laravel (`laravel`) - Changelog
 
+## 0.6.2 - December 2014
+
+* Fixing task load order to prevent assumption of packages being installed
+* Adding default app database name variable
+
 ## 0.6.1 - December 2014
 
 * Preparing role for public release
