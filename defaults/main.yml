@@ -1,9 +1,11 @@
 ---
 # Default variables - inventory or playbook overrides will be respected
 
+# OS Users
 laravel_app_user_username: app
 laravel_app_user_add_artisan_bash_aliases: true
 
+# App environment
 laravel_app_root: /app
 
 laravel_bootstrap_environments: []
@@ -14,3 +16,6 @@ laravel_env_defaults:
     - key: debug_mode
       type: raw
       value: false
+
+# App database
+laravel_app_db_name: app

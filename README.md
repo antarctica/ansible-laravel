@@ -86,9 +86,16 @@ Include these steps in your project README (usually in a 'getting started' secti
 			* value = "false"
 * `laravel_env_user`
     * Options for a specific environment file
-    * This variable **must** be declared if a task relies on it as no default is provided and a fatal error will occur.
-    * The `name` property **must** match an environment set in `bootstrap/start.php`.
+    * This variable **must** be declared if a task relies on it as no default is provided and a fatal error will occur
+    * The `name` property **must** match an environment set in `bootstrap/start.php`
     * Default: (none - not defined)
+* `laravel_app_db_name`
+    * Provides a neutral variable for the default database (or equivalent) regardless of which database (or equivalent) system is used
+    * This variable **must** match the name of an available database (or equivalent) in whichever database (or equivalent) system is used
+    * Default: "app"
+
+
+#### Laravel environments
 
 The format of `laravel_env_defaults` and `laravel_env_user` is as follows:
 
