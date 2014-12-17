@@ -1,7 +1,5 @@
 ---
 
-- include: app-user.yml
-
 - name: touch start file to prevent permissions problems
   file: path="{{ laravel_app_root }}/bootstrap/start.php" mode=755 state=touch
 
@@ -12,3 +10,5 @@
   shell: 'grep -c -w "indatus/dispatcher" {{ laravel_app_root }}/composer.json'
   register: laravel_package_indatus_dispatcher_installed
   ignore_errors: True
+
+- include: app-user.yml
