@@ -1,7 +1,16 @@
 ---
 
-- name: touch start file to prevent permissions problems
-  file: path="{{ laravel_app_root }}/bootstrap/start.php" mode=755 state=touch
+- name: determine if start file exists
+  stat: path="{{ laravel_app_root }}/bootstrap/start.php"
+  register: laravel_fact_start_file_exist
+
+- name: ensure start file exists
+  file: path="{{ laravel_app_root }}/bootstrap/start.php" state=touch
+  when: laravel_fact_start_file_exist.stat.exists == false
+
+- name: ensure start file has correct permissions
+  file: path="{{ laravel_app_root }}/bootstrap/start.php" mode=0755 state=file
+  when: laravel_fact_start_file_exist.stat.mode != 0775
 
 - name: configure laravel boostrap file
   template: src=bootstrap/start.php.j2 dest="{{ laravel_app_root }}/bootstrap/start.php"
@@ -10,5 +19,6 @@
   shell: 'grep -c -w "indatus/dispatcher" {{ laravel_app_root }}/composer.json'
   register: laravel_package_indatus_dispatcher_installed
   ignore_errors: True
+  changed_when: False
 
 - include: app-user.yml
