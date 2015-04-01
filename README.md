@@ -129,7 +129,7 @@ This project welcomes contributions, see `CONTRIBUTING` for our general policy.
 
 ### Committing changes
 
-The [Git flow](https://github.com/fzaninotto/Faker#formatters) workflow is used to manage development of this package.
+The [Git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow/) workflow is used to manage development of this package.
 
 Discrete changes should be made within *feature* branches, created from and merged back into *develop* (where small one-line changes may be made directly).
 
@@ -143,4 +143,4 @@ Issues, bugs, improvements, questions, suggestions and other tasks related to th
 
 ## License
 
-Copyright 2014 NERC BAS. Licensed under the MIT license, see `LICENSE` for details.
+Copyright 2015 NERC BAS. Licensed under the MIT license, see `LICENSE` for details.
