@@ -1,5 +1,9 @@
 # Laravel (`laravel`) - Changelog
 
+## 0.6.3 - April 2014
+
+* Fixing tasks to prevent unnecessary change reporting
+
 ## 0.6.2 - December 2014
 
 * Fixing task load order to prevent assumption of packages being installed
