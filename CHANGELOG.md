@@ -2,6 +2,7 @@
 
 ## 0.6.4 - April 2014
 
+* DEPRECATING ROLE! - Please use the Laravel-5 role if possible
 * Fixing issues with setting permissions on start file
 
 ## 0.6.3 - April 2014
