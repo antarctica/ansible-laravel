@@ -8,6 +8,10 @@
   file: path="{{ laravel_app_root }}/bootstrap/start.php" state=touch
   when: laravel_fact_start_file_exist.stat.exists == false
 
+- name: re-determine if start file exists
+  stat: path="{{ laravel_app_root }}/bootstrap/start.php"
+  register: laravel_fact_start_file_exist
+
 - name: ensure start file has correct permissions
   file: path="{{ laravel_app_root }}/bootstrap/start.php" mode=0755 state=file
   when: laravel_fact_start_file_exist.stat.mode != 0775

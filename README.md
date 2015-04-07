@@ -1,8 +1,19 @@
-# Laravel (`laravel`)
+# Laravel (`laravel`) **DEPRECATED**
 
 **Part of the BAS Ansible Role Collection (BARC)**
 
 Configures the Laravel framework
+
+## Deprecated role
+
+This role is deprecated and no longer under active development.
+
+Where possible the `laravel-5` role should be used, which succeeds this role.
+
+As a deprecated role no new features will be added or non-critical or security related bugs fixed.
+
+Wherever feasible critical and security related bugs **will** be fixed as patch releases. 
+Where this isn't possible this package may be removed where its availability is considered irresponsible or negligent on our part.
 
 ## Overview
 
@@ -26,6 +37,8 @@ This role serves more than one purpose, controlled by including task files from 
 ## Availability
 
 This role is designed for internal use but if useful can be shared publicly.
+
+Note: This role is deprecated, please see the *Deprecated role* section for more information.
 
 ## Usage
 
@@ -124,6 +137,8 @@ The format of `laravel_env_defaults` and `laravel_env_user` is as follows:
 ## Contributing
 
 This project welcomes contributions, see `CONTRIBUTING` for our general policy.
+
+Note: This role is deprecated, please see the *Deprecated role* section for more information.
 
 ## Developing
 
